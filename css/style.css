@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.background_01 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #33393f;
+}
+
+.imgbackground {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하며 컨테이너를 채우기 */
+  position: absolute; /* 부모 요소에 대해 절대 위치 지정 */
+  top: 0; /* 상단에 위치 */
+  left: 0; /* 좌측에 위치 */
+  z-index: 0; /* 이미지의 z-index를 설정 */
+}
+
+.imghighlights {
+  position: absolute;
+  left: 50px; /* 가장 가까운 위치 지정 조상으로부터 100px 오른쪽 */
+  z-index: 1;
+}
+
+.imgtext {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #2c4b72;
+  position: absolute;
+  left: 55px; /* 가장 가까운 위치 지정 조상으로부터 100px 오른쪽 */
+  z-index: 2;
+}
+
+.imgparagraph {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #33393f;
+  position: absolute;
+  left: 55px; /* 가장 가까운 위치 지정 조상으로부터 100px 오른쪽 */
+  z-index: 2;
+}
+
+.imgsky {
+  width: 100%;
+  height: 600px;
+  object-fit: cover; /* 이미지 비율 유지하며 컨테이너를 채우기 */
+  position: absolute; /* 부모 요소에 대해 절대 위치 지정 */
+  left: 0; /* 좌측에 위치 */
+  z-index: 0; /* 이미지의 z-index를 설정 */
+  opacity: 0.2; /* 0(완전 투명) ~ 1(불투명) 사이 값 설정 */
+}
+
+.overlay_text {
+  position: absolute; /* 부모 요소에 상대적으로 위치 지정 */
+  top: 50%; /* 세로 가운데 정렬 */
+  left: 50%; /* 가로 가운데 정렬 */
+  transform: translate(-50%, -50%); /* 텍스트를 완전히 가운데로 이동 */
+  color: #e0e4e7; /* 텍스트 색상 */
+  font-size: 24px; /* 텍스트 크기 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  z-index: 1; /* 텍스트의 z-index를 설정하여 이미지 위에 표시 */
+}
+
+.videobackground {
+  width: 100%;
+  height: 500;
+  background-color: #e0e4e7;
+  background: linear-gradient(#33393f, #33393f, #8abeff, #33393f, #33393f);
+}
+
+.background_02 {
+  width: 100%;
+  height: 900px;
+  background-color: #e0e4e7;
+  background: linear-gradient(#e0e4e7, #e0e4e7, #e0e4e7, #33393f);
+}
+
+.background_03 {
+  width: 100%;
+  height: 900px;
+  background-color: #33393f;
+  position: relative;
+}
+
+.background_04 {
+  width: 100%;
+  height: 1200px;
+  background-color: #33393f;
+  position: relative;
+}
+
+.background_05 {
+  width: 100%;
+  height: 900px;
+  background-color: #33393f;
+}
+
+.contentsbox {
+  position: relative;
+  background-color: rgba(252, 252, 252, 0.8);
+  width: 600px;
+  height: 600px;
+  border-radius: 15px; /* 원하는 라운드 값 설정 */
+  z-index: 0;
+}
+
+.horizontal_line {
+  width: 700px;
+  height: 2px;
+  background-color: #e0e4e7;
+  margin: 0px auto;
+}
+
+.sticky_tab {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 200; /* 보통 굵기 */
+  position: sticky;
+  top: 0; /* 화면의 최상단에 고정 */
+  background-color: rgba(224, 228, 231, 0.5); /* 탭의 배경색 */
+  color: #33393f; /* 텍스트 색상 */
+  padding: 30px 160px; /* 여백 */
+  display: flex; /* 가로 정렬을 위해 flex 사용 */
+  justify-content: space-around; /* 요소 간 간격을 균등하게 분배 */
+  text-align: center;
+  z-index: 1000; /* 다른 요소 위에 표시되도록 우선순위 설정 */
+}
+
+.tab {
+  cursor: pointer; /* 포인터 커서로 변경 */
+  transition: font-weight 0.3s; /* 애니메이션 추가 */
+}
+
+.tab.active {
+  font-weight: bold; /* 활성화된 탭 볼드 처리 */
+}
+
+.title {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700; /* 굵기 설정 */
+  font-style: normal; /* 기본 스타일 (기울임 없음) */
+}
+
+.paragraph {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #2c4b72;
+  line-height: 1.2;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  min-width: 310px;
+  max-width: 800px;
+  z-index: 2; /* 텍스트의 z-index를 설정하여 이미지 위에 표시 */
+}
+
+.container {
+  height: 1000px;
+  background-color: transparent; /* 배경색을 투명으로 설정 */
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #353537;
+}
+
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #ffffff;
+}
+
+.highcharts-data-table tr:hover {
+  background: #ffffff;
+}
+
+.highcharts-description {
+  margin: 0.3rem 10px;
+}

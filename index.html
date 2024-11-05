@@ -1,0 +1,416 @@
+<html>
+  <head>
+    <!-- JQuery Load -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS Load -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  </head>
+  <body>
+    <div class="background_01">
+      <img src="img/background01.png" class="imgbackground" />
+      <div class="overlay_text">
+        <p
+          class="paragraph"
+          style="font-weight: 200; font-size: 20px; color: #2c4b72"
+        >
+          청년들이 힘을 낼 수 있게 <br />더 많은 청년들의 꿈을 응원합니다
+        </p>
+        <p class="title" style="font-size: 300px; color: #2c4b72">SOAR</p>
+        <p
+          class="paragraph"
+          style="font-weight: 700; font-size: 20px; color: #33393f"
+        >
+          청년 정책 아카이빙 페이지
+        </p>
+      </div>
+    </div>
+    <!-- Sticky Tab -->
+    <div class="sticky_tab">
+      <!-- 탭 영역 -->
+      <a href="#discover_section" class="tab" id="discover_tab">Discover</a>
+      <a href="#list_section" class="tab" id="list_tab">List</a>
+      <a href="#calender_section" class="tab" id="calendar_tab">Calender</a>
+      <a href="#graph_section" class="tab" id="graph_tab">Graph</a>
+    </div>
+    <!-- Discover section-->
+    <section id="discover_section">
+      <!--HighChart-->
+      <div class="background_02">
+        <div
+          style="padding: 50; display: flex; align-items: center; gap: 100px"
+        >
+          <div>
+            <div>
+              <p
+                class="paragraph"
+                style="
+                  font-weight: 600;
+                  font-size: 30px;
+                  color: #2c4b72;
+                  margin-top: 50px;
+                "
+              >
+                2022년, 청년 부채 전년 대비 41.2% 증가
+              </p>
+              <hr style="width: 800px; border: 0.5px solid #888e96" />
+              <p class="paragraph" style="font-size: 15px">
+                통계청, ⌜가구주 연령별 부채 증감 추이⌟ | 단위 : 만 원
+              </p>
+            </div>
+            <figure class="highcharts-figure">
+              <div id="container"></div>
+            </figure>
+          </div>
+          <div>
+            <p
+              class="paragraph"
+              style="
+                font-weight: 600;
+                font-size: 40px;
+                color: #2c4b72;
+                margin-bottom: 48px;
+              "
+            >
+              희망을 잃어가는 <br />청년세대들
+            </p>
+
+            <p class="paragraph" style="margin-bottom: 20px">
+              반짝반짝 빛나야 할 청춘이, 빚내는 청춘으로 전락하고 있다.
+            </p>
+            <p class="paragraph" style="margin-bottom: 20px">
+              대학 졸업과 동시에 <br />학자금 대출을 상환해야 한다는 압박감에
+              시달리지만,<br />
+              고용난으로 높은 취업의 장벽을 뚫기란 쉽지 않다.
+            </p>
+            <p class="paragraph" style="margin-bottom: 20px">
+              단군 이래 가장 스펙이 좋고, 똑똑한 세대라고 불리면서도<br />
+              그만큼 양질의 일자리를 갖지 못하는 청년들에게<br />
+              청춘이란 그저 외롭고 불안한 나날의 연속일 뿐이다.
+            </p>
+            <p class="paragraph" style="font-size: 12px; color: #8abeff">
+              출처 : 아이굿뉴스(http://www.igoodnews.net)
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--논문 인용-->
+      <div
+        class="background_03"
+        style="padding: 100; display: flex; align-items: center; gap: 100px"
+      >
+        <div>
+          <p
+            class="title"
+            style="font-weight: 100; font-size: 100px; color: #8abeff"
+          >
+            Point
+          </p>
+          <p
+            class="paragraph"
+            style="
+              font-weight: 400;
+              font-size: 30px;
+              color: #f3f3f3;
+              margin-bottom: 48px;
+            "
+          >
+            니트 상태가 지속될수록 <br />
+            청년들의 삶의 만족도에 부정적 영향을 미침
+          </p>
+          <hr
+            style="
+              width: 600px;
+              border: 2px solid #888e96;
+              margin-top: -10;
+              margin-bottom: 10;
+              margin-left: 0;
+            "
+          />
+          <p class="paragraph" style="color: #f3f3f3">
+            한국 인구학회 [청년니트(NEET)의 자살생각 및 우울:
+          </p>
+          <p class="paragraph" style="color: #f3f3f3">
+            수도권과 비수도권 비교를 중심으로]2024.06 지은주 외 2인
+          </p>
+        </div>
+        <div class="contentsbox">
+          <img
+            src="img/highlights.png"
+            class="imghighlights"
+            style="top: 80px"
+          />
+          <p class="imgtext" style="top: 80px">
+            높아지는 스트레스와 짧은 수면시간
+          </p>
+          <p class="imgparagraph" style="top: 140px">
+            불안정한 고용 상태가 지속될수록 스트레스 지수는 높아지고 <br />
+            수면시간에도 악영향을 미친다
+          </p>
+          <img
+            src="img/highlights.png"
+            class="imghighlights"
+            style="top: 310px"
+          />
+          <p class="imgtext" style="top: 310px">
+            깊어지는 삶에 대한 부정적 인식
+          </p>
+          <p class="imgparagraph" style="top: 380px">
+            니트 상태가 장기화될수록 삶의 인식이 부정적으로 변화하고 <br />
+            청년 니트가 그렇지 않은 청년에 비해 자살 생각과 위험비가 <br />
+            높음을 보여주었다
+          </p>
+        </div>
+      </div>
+      <div
+        style="
+          padding-top: 100;
+          background-color: #33393f;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <p class="paragraph" style="color: #f3f3f3">
+          ∇ 하단의 영상을 확인해보세요
+        </p>
+      </div>
+      <div
+        class="videobackground"
+        style="
+          padding: 100;
+          background-color: #33393f;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/piQcs7_ZG54?si=vDhGELU7IZu-XLQY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <!--전 List 전환-->
+      <div class="background_03" style="position: relative">
+        <img
+          src="img/skyblueimg.png"
+          class="imgsky"
+          style="position: absolute; padding-top: 200px; top: 0"
+        />
+        <div
+          class="imgtext"
+          style="
+            font-weight: 200;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 30px;
+            "
+          >
+            <p>지금 바로</p>
+            <p class="title" style="font-size: 100px">SOAR</p>
+            <p>를 통해</p>
+          </div>
+          <p>정부에서 제공하는 청년 지원 사업을 확인해보세요</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- List section -->
+    <section id="list_section">
+      <div class="background_03" style="text-align: center">
+        <div>
+          <p
+            class="title"
+            style="
+              padding-top: 100;
+              font-weight: 100;
+              font-size: 100px;
+              color: #8abeff;
+            "
+          >
+            List
+          </p>
+          <p
+            class="paragraph"
+            style="
+              font-weight: 400;
+              font-size: 30px;
+              color: #f3f3f3;
+              margin-bottom: 48px;
+            "
+          >
+            각종 부처에서 제공하는 도움을 청년들이 받을 수 있게
+          </p>
+          <hr
+            style="width: 600px; border: 2px solid #888e96; margin-bottom: 40px"
+          />
+          <p class="paragraph" style="color: #f3f3f3">
+            아래에 카드를 Click 하고 현재 진행 중인 지원 사업 리스트들을
+            확인해보세요
+          </p>
+        </div>
+        <!-- 가로 스크롤 영역 -->
+        <div style="display: inline-block; overflow-x: auto; width: 100%">
+          <div style="display: inline-block; white-space: nowrap">
+            <div
+              style="
+                width: 300px;
+                height: 100px;
+                background-color: #ccc;
+                display: inline-block;
+                margin-right: 10px;
+              "
+            >
+              Item 1
+            </div>
+            <div
+              style="
+                width: 300px;
+                height: 100px;
+                background-color: #ccc;
+                display: inline-block;
+                margin-right: 10px;
+              "
+            >
+              Item 2
+            </div>
+            <div
+              style="
+                width: 300px;
+                height: 100px;
+                background-color: #ccc;
+                display: inline-block;
+                margin-right: 10px;
+              "
+            >
+              Item 3
+            </div>
+            <div
+              style="
+                width: 300px;
+                height: 100px;
+                background-color: #ccc;
+                display: inline-block;
+                margin-right: 10px;
+              "
+            >
+              Item 4
+            </div>
+            <div
+              style="
+                width: 300px;
+                height: 100px;
+                background-color: #ccc;
+                display: inline-block;
+                margin-right: 10px;
+              "
+            >
+              Item 5
+            </div>
+            <div
+              style="
+                width: 300px;
+                height: 100px;
+                background-color: #ccc;
+                display: inline-block;
+                margin-right: 10px;
+              "
+            >
+              Item 6
+            </div>
+            <!-- 필요한 만큼 추가 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calender_section">
+      <div class="background_04">
+        <div style="padding: 80; text-align: right">
+          <p
+            class="title"
+            style="
+              padding-top: 100;
+              font-weight: 100;
+              font-size: 100px;
+              color: #8abeff;
+            "
+          >
+            Calender
+          </p>
+          <p
+            class="paragraph"
+            style="
+              font-weight: 400;
+              font-size: 30px;
+              color: #f3f3f3;
+              margin-bottom: 48px;
+            "
+          >
+            10월, 현재 진행 중인 각 일자 별 지원 사업 현황을 확인해보세요
+          </p>
+        </div>
+        <div>
+          <div class="contentsbox">
+            <img
+              src="img/highlights.png"
+              class="imghighlights"
+              style="top: 80px"
+            />
+            <p class="imgtext" style="top: 80px">
+              높아지는 스트레스와 짧은 수면시간
+            </p>
+            <p class="imgparagraph" style="top: 140px">
+              불안정한 고용 상태가 지속될수록 스트레스 지수는 높아지고 <br />
+              수면시간에도 악영향을 미친다
+            </p>
+            <img
+              src="img/highlights.png"
+              class="imghighlights"
+              style="top: 310px"
+            />
+            <p class="imgtext" style="top: 310px">
+              깊어지는 삶에 대한 부정적 인식
+            </p>
+            <p class="imgparagraph" style="top: 380px">
+              니트 상태가 장기화될수록 삶의 인식이 부정적으로 변화하고 <br />
+              청년 니트가 그렇지 않은 청년에 비해 자살 생각과 위험비가 <br />
+              높음을 보여주었다
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="graph_section">
+      <div class="background_04">
+        <p>먀</p>
+      </div>
+    </section>
+  </body>
+</html>

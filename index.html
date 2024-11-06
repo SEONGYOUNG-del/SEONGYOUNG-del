@@ -9,13 +9,21 @@
     <!-- CSS Load -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- HighCart Load -->
     <script src="js/script.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   </head>
   <body>
+    <!-- Cover -->
     <div class="background_01">
       <img src="img/background01.png" class="imgbackground" />
       <div class="overlay_text">
@@ -25,12 +33,47 @@
         >
           청년들이 힘을 낼 수 있게 <br />더 많은 청년들의 꿈을 응원합니다
         </p>
-        <p class="title" style="font-size: 300px; color: #2c4b72">SOAR</p>
+        <p class="title01" style="font-size: 300px; color: #2c4b72">SOAR</p>
         <p
           class="paragraph"
           style="font-weight: 700; font-size: 20px; color: #33393f"
         >
           청년 정책 아카이빙 페이지
+        </p>
+
+        <p
+          class="paragraph"
+          style="
+            padding-top: 30px;
+            font-weight: 700;
+            font-size: 20px;
+            color: #33393f;
+          "
+        >
+          ▾
+        </p>
+        <p
+          class="paragraph"
+          style="font-weight: 700; font-size: 20px; color: #33393f"
+        >
+          ▾
+        </p>
+        <p
+          class="paragraph"
+          style="font-weight: 700; font-size: 20px; color: #33393f"
+        >
+          ▾
+        </p>
+        <p
+          class="paragraph"
+          style="
+            padding-top: 10px;
+            font-weight: 200;
+            font-size: 14px;
+            color: #33393f;
+          "
+        >
+          아래로 스크롤 해서 본문을 확인하세요
         </p>
       </div>
     </div>
@@ -108,10 +151,20 @@
         class="background_03"
         style="padding: 100; display: flex; align-items: center; gap: 100px"
       >
+        <img
+          src="img/pointback.png"
+          class="imgsky"
+          style="height: 600px; opacity: 0.1"
+        />
         <div>
           <p
             class="title"
-            style="font-weight: 100; font-size: 100px; color: #8abeff"
+            style="
+              font-weight: 100;
+              font-size: 100px;
+              color: #8abeff;
+              z-index: 3;
+            "
           >
             Point
           </p>
@@ -159,18 +212,19 @@
           <img
             src="img/highlights.png"
             class="imghighlights"
-            style="top: 310px"
+            style="top: 270px"
           />
-          <p class="imgtext" style="top: 310px">
+          <p class="imgtext" style="top: 270px">
             깊어지는 삶에 대한 부정적 인식
           </p>
-          <p class="imgparagraph" style="top: 380px">
+          <p class="imgparagraph" style="top: 330px">
             니트 상태가 장기화될수록 삶의 인식이 부정적으로 변화하고 <br />
             청년 니트가 그렇지 않은 청년에 비해 자살 생각과 위험비가 <br />
             높음을 보여주었다
           </p>
         </div>
       </div>
+      <!-- 영상 소개 -->
       <div
         style="
           padding-top: 100;
@@ -180,63 +234,80 @@
           align-items: center;
         "
       >
-        <p class="paragraph" style="color: #f3f3f3">
-          ∇ 하단의 영상을 확인해보세요
-        </p>
-      </div>
-      <div
-        class="videobackground"
-        style="
-          padding: 100;
-          background-color: #33393f;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        "
-      >
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/piQcs7_ZG54?si=vDhGELU7IZu-XLQY"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <!--전 List 전환-->
-      <div class="background_03" style="position: relative">
-        <img
-          src="img/skyblueimg.png"
-          class="imgsky"
-          style="position: absolute; padding-top: 200px; top: 0"
-        />
+        <!-- 배경 이미지 -->
         <div
-          class="imgtext"
+          class="background_03"
           style="
-            font-weight: 200;
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
           "
         >
+          <img
+            src="img/skyblueimg.png"
+            class="imgsky"
+            style="
+              position: absolute;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            "
+          />
           <div
             style="
               display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 30px;
+              justify-content: center; /* 수평 중앙 정렬 */
+              align-items: center; /* 수직 중앙 정렬 */
+              gap: 200px; /* 텍스트와 영상 사이 간격 */
             "
           >
-            <p>지금 바로</p>
-            <p class="title" style="font-size: 100px">SOAR</p>
-            <p>를 통해</p>
+            <!-- 텍스트 그룹 -->
+            <div
+              class="imgtext"
+              style="font-weight: 200; color: white; text-align: right"
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: flex-end; /* 우측 정렬 */
+                  align-items: center;
+                  gap: 20px;
+                "
+              >
+                <p style="font-size: 15px">
+                  지금바로 SOAR에서 <br />
+                  정부가 지원해주는 청년 고용 정책들을 확인해보세요
+                </p>
+              </div>
+            </div>
+
+            <!-- 유튜브 영상 -->
+            <div
+              style="
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+              "
+            >
+              <iframe
+                width="520"
+                height="315"
+                src="https://www.youtube.com/embed/piQcs7_ZG54?si=vDhGELU7IZu-XLQY"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
-          <p>정부에서 제공하는 청년 지원 사업을 확인해보세요</p>
         </div>
       </div>
     </section>
@@ -248,7 +319,7 @@
           <p
             class="title"
             style="
-              padding-top: 100;
+              padding-top: 150;
               font-weight: 100;
               font-size: 100px;
               color: #8abeff;
@@ -271,78 +342,109 @@
             style="width: 600px; border: 2px solid #888e96; margin-bottom: 40px"
           />
           <p class="paragraph" style="color: #f3f3f3">
-            아래에 카드를 Click 하고 현재 진행 중인 지원 사업 리스트들을
-            확인해보세요
+            아래에 카드를 Click 하고 상시 진행 중인 지원 사업 리스트의
+            상세내용을 확인해보세요
           </p>
         </div>
         <!-- 가로 스크롤 영역 -->
         <div style="display: inline-block; overflow-x: auto; width: 100%">
-          <div style="display: inline-block; white-space: nowrap">
+          <div
+            style="padding: 100px; display: inline-block; white-space: nowrap"
+          >
             <div
+              id="list01"
               style="
+                border-radius: 20px;
                 width: 300px;
-                height: 100px;
+                height: 180px;
                 background-color: #ccc;
                 display: inline-block;
-                margin-right: 10px;
+                margin-right: 70px;
               "
             >
-              Item 1
+              <img
+                id="img01"
+                style="width: 300px; object-fit: cover"
+                src="img/list01.png"
+              />
+            </div>
+            <div
+              id="list02"
+              style="
+                border-radius: 20px;
+                width: 300px;
+                height: 180px;
+                background-color: #ccc;
+                display: inline-block;
+                margin-right: 70px;
+              "
+            >
+              <img
+                id="img02"
+                style="width: 300px; object-fit: cover"
+                src="img/list02.png"
+              />
             </div>
             <div
               style="
+                border-radius: 20px;
                 width: 300px;
-                height: 100px;
+                height: 180px;
                 background-color: #ccc;
                 display: inline-block;
-                margin-right: 10px;
+                margin-right: 70px;
               "
             >
-              Item 2
+              <img
+                style="width: 300px; object-fit: cover"
+                src="img/list03.png"
+              />
+            </div>
+
+            <div
+              style="
+                border-radius: 20px;
+                width: 300px;
+                height: 180px;
+                background-color: #ccc;
+                display: inline-block;
+                margin-right: 70px;
+              "
+            >
+              <img
+                style="width: 300px; object-fit: cover"
+                src="img/list04.png"
+              />
             </div>
             <div
               style="
+                border-radius: 20px;
                 width: 300px;
-                height: 100px;
+                height: 180px;
                 background-color: #ccc;
                 display: inline-block;
-                margin-right: 10px;
+                margin-right: 70px;
               "
             >
-              Item 3
+              <img
+                style="width: 300px; object-fit: cover"
+                src="img/list05.png"
+              />
             </div>
             <div
               style="
+                border-radius: 20px;
                 width: 300px;
-                height: 100px;
+                height: 180px;
                 background-color: #ccc;
                 display: inline-block;
-                margin-right: 10px;
+                margin-right: 70px;
               "
             >
-              Item 4
-            </div>
-            <div
-              style="
-                width: 300px;
-                height: 100px;
-                background-color: #ccc;
-                display: inline-block;
-                margin-right: 10px;
-              "
-            >
-              Item 5
-            </div>
-            <div
-              style="
-                width: 300px;
-                height: 100px;
-                background-color: #ccc;
-                display: inline-block;
-                margin-right: 10px;
-              "
-            >
-              Item 6
+              <img
+                style="width: 300px; object-fit: cover"
+                src="img/list06.png"
+              />
             </div>
             <!-- 필요한 만큼 추가 -->
           </div>
@@ -350,9 +452,22 @@
       </div>
     </section>
 
+    <!--Calender Section-->
     <section id="calender_section">
       <div class="background_04">
-        <div style="padding: 80; text-align: right">
+        <img src="img/imgcalenderback.png" class="imgsky" />
+        <img
+          src="img/curveline.png"
+          class="imghighlights"
+          style="
+            width: 100%;
+            height: 90%;
+            opacity: 0.2;
+            margin-top: 200px;
+            margin-right: 40px;
+          "
+        />
+        <div style="padding-right: 100; text-align: right; z-index: 3">
           <p
             class="title"
             style="
@@ -368,7 +483,7 @@
             class="paragraph"
             style="
               font-weight: 400;
-              font-size: 30px;
+              font-size: 20px;
               color: #f3f3f3;
               margin-bottom: 48px;
             "
@@ -376,40 +491,59 @@
             10월, 현재 진행 중인 각 일자 별 지원 사업 현황을 확인해보세요
           </p>
         </div>
-        <div>
-          <div class="contentsbox">
-            <img
-              src="img/highlights.png"
-              class="imghighlights"
-              style="top: 80px"
-            />
-            <p class="imgtext" style="top: 80px">
-              높아지는 스트레스와 짧은 수면시간
-            </p>
-            <p class="imgparagraph" style="top: 140px">
-              불안정한 고용 상태가 지속될수록 스트레스 지수는 높아지고 <br />
-              수면시간에도 악영향을 미친다
-            </p>
-            <img
-              src="img/highlights.png"
-              class="imghighlights"
-              style="top: 310px"
-            />
-            <p class="imgtext" style="top: 310px">
-              깊어지는 삶에 대한 부정적 인식
-            </p>
-            <p class="imgparagraph" style="top: 380px">
-              니트 상태가 장기화될수록 삶의 인식이 부정적으로 변화하고 <br />
-              청년 니트가 그렇지 않은 청년에 비해 자살 생각과 위험비가 <br />
-              높음을 보여주었다
-            </p>
-          </div>
-        </div>
+        <img
+          src="img/calenderimg.png"
+          class="imghighlights"
+          style="position: relative; width: 50%"
+        />
       </div>
     </section>
+
+    <!--Graph Section-->
     <section id="graph_section">
-      <div class="background_04">
-        <p>먀</p>
+      <div class="background_05">
+        <div class="background_05">
+          <img src="img/graphback.png" class="imgsky" style="height: 105%" />
+          <div style="text-align: center; z-index: 3">
+            <p
+              class="title"
+              style="
+                padding-top: 100;
+                font-weight: 100;
+                font-size: 100px;
+                color: #8abeff;
+              "
+            >
+              Graph
+            </p>
+            <p
+              class="paragraph"
+              style="
+                font-weight: 400;
+                font-size: 20px;
+                color: #f3f3f3;
+                margin-bottom: 48px;
+              "
+            >
+              2024년 월별 카테고리 진행 상황을 확인하세요
+            </p>
+          </div>
+          <div
+            class="graphbox"
+            style="
+              position: relative;
+              z-index: 1000;
+              margin: auto;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <figure class="highcharts-figure">
+              <div id="container2"></div>
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
   </body>

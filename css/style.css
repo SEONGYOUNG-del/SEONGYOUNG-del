@@ -69,7 +69,7 @@
   width: 100%;
   height: 500;
   background-color: #e0e4e7;
-  background: linear-gradient(#33393f, #33393f, #8abeff, #33393f, #33393f);
+  background: linear-gradient(#33393f, #e0e4e7, #33393f);
 }
 
 .background_02 {
@@ -103,9 +103,18 @@
   position: relative;
   background-color: rgba(252, 252, 252, 0.8);
   width: 600px;
-  height: 600px;
+  height: 500px;
   border-radius: 15px; /* 원하는 라운드 값 설정 */
   z-index: 0;
+}
+
+.graphbox {
+  position: relative;
+  background-color: rgba(252, 252, 252, 0.8);
+  width: 800px;
+  height: 500px;
+  border-radius: 15px; /* 원하는 라운드 값 설정 */
+  z-index: 100;
 }
 
 .horizontal_line {
@@ -136,6 +145,42 @@
 
 .tab.active {
   font-weight: bold; /* 활성화된 탭 볼드 처리 */
+}
+
+/* 기본 SOAR 스타일 */
+.title01 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700; /* 굵기 설정 */
+  font-style: normal; /* 기본 스타일 (기울임 없음) */
+  position: relative;
+  display: inline-block;
+  font-size: 300px;
+  color: #2c4b72;
+  transition: color 0.3s ease;
+}
+
+.title01:hover {
+  color: #33393f; /* 마우스 오버 시 색상 변화 */
+}
+
+/* SOAR 텍스트 위에 오버레이 하이라이트 추가 */
+.title01::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 160px;
+  background-color: #6aacff;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: width 0.5s ease-in-out;
+  border-radius: 8px;
+}
+
+.title01:hover::before {
+  opacity: 0.3;
+  width: 800px; /* 마우스 오버 시 하이라이트가 좌측에서 우측으로 확장 */
 }
 
 .title {

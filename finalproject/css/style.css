@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+/* Reset 기본 스타일 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 스크롤 방지 */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 헤더 */
+header {
+  background-color: #f4f4f4;
+  text-align: center;
+  width: 100%; /* 헤더가 전체 화면 너비를 차지하도록 설정 */
+}
+
+.hidden {
+  display: none;
+}
+
+/* 프로그레스 바 컨테이너 */
+#progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #b9d9e6; /* 기본 배경 색 */
+  position: fixed; /* 화면 상단에 고정 */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* 다른 요소 위에 표시 */
+}
+
+/* 프로그레스 바 */
+#progress-bar {
+  height: 100%;
+  background-color: #f7ebff; /* 게이지 색상 */
+  width: 0; /* 초기 너비는 0% */
+  transition: width 0.3s ease; /* 부드러운 애니메이션 */
+}
+
+/* 메인 영역 */
+main {
+  position: relative; /* 자식 요소의 위치 설정 기준 */
+  flex: 1; /* 헤더와 푸터를 제외한 영역 채우기 */
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #e4c2fb,
+    #e0ebf4,
+    #d0dbf3
+  ); /* 그라데이션 배경 */
+  color: white; /* 텍스트 색상 */
+  height: calc(100vh - 50px); /* 화면 전체 높이에서 footer 높이를 제외 */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 중앙 정렬 */
+  box-sizing: border-box; /* 패딩과 보더 포함 */
+  overflow: hidden; /* 콘텐츠로 인해 스크롤이 생기지 않도록 설정 */
+}
+
+/* 01Cover Background */
+#cover-background {
+  position: relative; /* 부모 컨테이너 */
+  width: 100%;
+  height: 100%; /* 부모 높이를 화면 전체로 설정 */
+  overflow: hidden; /* 넘치는 콘텐츠 숨김 */
+}
+
+/* 배경 이미지 */
+#coverbackground-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* 화면 전체를 채움 */
+  object-fit: cover; /* 비율 유지하며 채우기 */
+  z-index: 1; /* 가장 아래 레이어 */
+}
+
+/* 타로 이미지 */
+#covertarot-img {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 부모 기준 중앙 정렬 */
+  width: 80%; /* 적절한 크기 설정 */
+  height: auto; /* 비율 유지 */
+  object-fit: cover;
+  z-index: 10; /* 배경 위에 표시 */
+}
+
+/* Cover Content */
+#cover-content {
+  position: absolute;
+  width: 60%;
+  top: 60%; /* 부모 높이의 50% 아래로 이동 */
+  left: 50%; /* 부모 너비의 50% 오른쪽으로 이동 */
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
+  text-align: center;
+  padding: 20px;
+  z-index: 100; /* 가장 위 레이어 */
+  background-color: rgba(255, 255, 255); /* 배경 투명도 적용 */
+  border-radius: 40px; /* 둥근 모서리 */
+}
+
+#cover-text {
+  font-size: 22px;
+  font-family: "Diphylleia", sans-serif; /* 어쩌구.. 서체 적용 */
+  margin-bottom: 30px;
+  color: #6606a5;
+  line-height: 1.5;
+}
+
+/* 시작하기 버튼 */
+#start-btn {
+  padding: 15px 30px;
+  font-family: "Gamja Flower", cursive; /* 감자 플라워 서체 적용 */
+  font-size: 32px;
+  background-color: #44374d;
+  color: white;
+  border: 4px solid #c9e7d8; /* 두꺼운 테두리 추가 */
+  border-radius: 40px;
+  border-color: #e4c2fb;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* 버튼이 다른 요소 위에 표시되도록 설정 */
+}
+
+#start-btn:hover {
+  background-color: #aa92b9;
+}
+
+/* 02 Onboarding */
+#onboarding-background {
+  position: relative; /* 부모 컨테이너 */
+  display: flex; /* Flexbox 사용 */
+  flex-direction: column; /* 위아래로 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  width: 100%;
+  height: 100%; /* 화면 전체 높이 */
+  overflow: hidden; /* 넘치는 콘텐츠 숨김 */
+  background-color: rgba(255, 255, 255, 0.7); /* 배경 투명도 적용 */
+}
+
+/* Onboarding Text */
+#onboarding-text {
+  font-size: 20px;
+  font-family: "Diphylleia", sans-serif; /* 서체 적용 */
+  margin-bottom: 20px; /* 아래 간격 */
+  color: #0e0d0f;
+  line-height: 1.5;
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* Motion Image */
+#onboardingmotion-img {
+  width: 8%; /* 적절한 크기 설정 */
+  height: auto; /* 비율 유지 */
+  margin-bottom: 20px; /* 텍스트와 간격 */
+}
+
+/* 설명 텍스트 */
+#onboarding-explaintext {
+  font-size: 18px;
+  font-family: "Diphylleia", sans-serif; /* 서체 적용 */
+  margin-bottom: 20px; /* 아래 간격 */
+  color: #0e0d0f;
+  line-height: 1.5;
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 활성화 상태 버튼 */
+#onboarding-btn {
+  padding: 15px 30px;
+  font-family: "Gamja Flower", cursive; /* 감자 플라워 서체 적용 */
+  font-size: 32px;
+  background-color: #e4e4e4;
+  color: #181317;
+  border: 4px solid #c5c5c5; /* 두꺼운 테두리 추가 */
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* 애니메이션 추가 */
+  margin-top: 20px; /* 위쪽 여백 */
+}
+
+/* 버튼 활성화 상태 */
+#onboarding-btn.activated {
+  background-color: #f4ceff; /* 활성화된 배경색 */
+  border-color: #f9f1f7; /* 활성화된 테두리 색상 */
+  transform: scale(1.1); /* 살짝 확대 효과 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 그림자 추가 */
+}
+
+/* 버튼 비활성화 상태 */
+#onboarding-btn:disabled {
+  background-color: #ccc; /* 비활성화 배경색 */
+  color: #fcd2d2; /* 비활성화 텍스트 색 */
+  border: 4px solid #ddd; /* 비활성화 테두리 색 */
+  cursor: not-allowed; /* 비활성화 상태 표시 */
+  pointer-events: none; /* 마우스 이벤트 차단 */
+}
+
+/* 03 Shuffle */
+/* Progress 박스 컨테이너 */
+#progress-container {
+  position: absolute;
+  top: 50px; /* 화면 상단 여백 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px; /* 박스 간격 */
+  z-index: 100;
+}
+
+/* Progress 박스 */
+.progress-box {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc; /* 기본 회색 */
+  border-radius: 50%;
+  transition: background-color 0.3s ease; /* 색상 변경 부드럽게 */
+}
+
+/* Shuffle 문구 스타일 */
+#shuffle-message {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Gamja Flower", cursive; /* 감자 플라워 서체 적용 */
+  color: #44374d;
+}
+
+#cards-container {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.5); /* 배경 투명도 적용 */
+}
+
+.shuffle-card {
+  position: absolute;
+  width: 43px;
+  height: 86px;
+}
+
+/* Next 버튼 스타일 */
+#next-btn-shuffle {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Gamja Flower", cursive; /* 서체 적용 */
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #44374d;
+  color: white;
+  border: 2px solid #c9e7d8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#next-btn-shuffle:hover {
+  background-color: #704f87;
+  transform: translateX(-50%) scale(1.05); /* 버튼 확대 효과 */
+}
+
+/* 04 choice */
+#card-draw-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+#choice-text {
+  position: absolute;
+  color: #6606a5;
+  top: 30%;
+  font-family: "Diphylleia", sans-serif; /* 서체 적용 */
+  font-size: 24px; /* 텍스트 크기 설정 (픽셀 단위) */
+  text-align: center; /* 가운데 정렬 (선택사항) */
+}
+
+#polygon-img {
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: auto;
+  margin-bottom: 20px; /* 텍스트와 간격 */
+}
+
+#single-card {
+  width: 86px;
+  height: 172px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px; /* 화면 하단에 배치 */
+  transition: all 0.5s ease;
+}
+
+#fan-cards-container {
+  position: absolute;
+  bottom: 200px; /* 카드 위치 조정 */
+  width: 100%;
+  display: none; /* 초기에는 숨김 */
+  justify-content: center;
+  align-items: center;
+}
+
+.fan-card {
+  position: absolute;
+  width: 172px;
+  height: 344px;
+  transition: transform 0.3s ease, z-index 0.3s ease; /* 부드러운 전환 */
+  cursor: pointer;
+  transform-origin: bottom center; /* 회전 기준점 */
+  transform: translate(-50%, -50%) rotate(0deg); /* 초기 위치 */
+}
+
+/* hover 시 카드 확대 및 위로 이동 */
+.fan-card:hover {
+  z-index: 10; /* hover된 카드가 다른 카드 위에 표시 */
+}
+
+/* 팝업 */
+#popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 팝업 창 스타일 */
+#popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 화면 중앙 정렬 */
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 30px; /* 상하 좌우 패딩 */
+  text-align: center;
+  width: 300px; /* 적절한 팝업 창 너비 */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Diphylleia", sans-serif; /* 텍스트 폰트 변경 */
+}
+
+/* 팝업 내용 텍스트 */
+#popup-container p {
+  margin-bottom: 20px; /* 텍스트와 버튼 사이 여백 */
+  font-size: 18px; /* 텍스트 크기 */
+  color: #44374d; /* 텍스트 색상 */
+}
+
+/* 팝업 버튼 컨테이너 */
+#popup-buttons {
+  display: flex;
+  justify-content: center; /* 버튼을 중앙에 정렬 */
+  gap: 15px; /* 버튼 간 간격 */
+  margin-top: 10px; /* 버튼 위쪽 여백 */
+}
+
+/* 팝업 버튼 공통 스타일 */
+.popup-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Gamja Flower", cursive; /* 버튼 폰트 */
+  color: white;
+  background-color: #44374d; /* 배경색 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* 버튼 hover 효과 */
+.popup-btn:hover {
+  background-color: #704f87; /* hover 시 색상 변경 */
+  transform: scale(1.05); /* 버튼 살짝 확대 */
+}
+
+/* 05 Menu */
+/* 팝업 오버레이 */
+#menu-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은 배경 */
+  display: none; /* 기본적으로 숨김 */
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* 팝업이 다른 요소 위에 표시되도록 설정 */
+}
+
+/* 팝업 컨테이너 */
+#menu-popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 화면 중앙 정렬 */
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px; /* 내부 여백 */
+  text-align: center;
+  width: 300px; /* 팝업 너비 */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+/* 팝업 내용 */
+#menu-popup-content {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #44374d; /* 텍스트 색상 */
+  font-family: "Diphylleia", sans-serif; /* 폰트 */
+}
+
+/* 팝업 버튼 컨테이너 */
+#menu-popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* 팝업 버튼 공통 스타일 */
+.menu-popup-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Gamja Flower", cursive;
+  color: white;
+  background-color: #44374d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* 버튼 hover 효과 */
+.menu-popup-btn:hover {
+  background-color: #704f87;
+  transform: scale(1.05);
+}
+
+/* 팝업 버튼 */
+#close-popup-btn {
+  padding: 10px 20px;
+  background-color: #44374d; /* 버튼 배경색 */
+  color: white; /* 버튼 텍스트 색상 */
+  border: none;
+  border-radius: 5px; /* 둥근 모서리 */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: "Gamja Flower", cursive; /* 폰트 */
+}
+
+/* 버튼 hover 효과 */
+#close-popup-btn:hover {
+  background-color: #704f87; /* hover 시 색상 변경 */
+  transform: scale(1.05); /* 버튼 확대 효과 */
+}
+
+/* 외부 요소 */
+/* BGM 버튼 */
+#bgm-toggle {
+  position: absolute; /* 위치를 고정 */
+  top: 20px; /* main의 좌측 상단 */
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 1001; /* 다른 콘텐츠 위에 배치 */
+}
+
+#bgm-toggle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 푸터 */
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: rgb(225, 234, 255, 0.2);
+  width: 100%; /* 푸터가 전체 화면 너비를 차지하도록 설정 */
+  box-sizing: border-box; /* 패딩 포함 */
+}
+
+/* 버튼 스타일 */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff8fe;
+}
+
+button:hover {
+  background-color: #ddd;
+}
